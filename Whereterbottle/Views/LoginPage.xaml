@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="Black"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Whereterbottle.Views.LoginPage">
+
+    <Grid>
+        <Image Source="LoginBackgroundpng"
+               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"
+               Margin="-20" />
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="250" Spacing="20">
+            <Grid Margin="20,0,0,0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="35" />
+                    <ColumnDefinition Width="35" />
+                    <ColumnDefinition Width="175" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+                       Source="whereterbottle.png"
+                       Aspect="AspectFill"
+                       Margin="25,0,0,20" />
+                <Image Grid.Row="1" Grid.Column="1"
+                       Source="UsernameIcon" />
+                <Entry Grid.Row="1" Grid.Column="2" x:Name="usernameEntry"
+                       Placeholder="Username" Keyboard="Default"
+                       HorizontalOptions="Center" WidthRequest="250" HeightRequest="40" />
+                <Image Grid.Row="3" Grid.Column="1"
+                       Source="PasswordIcon" />
+                <Entry Grid.Row="3" Grid.Column="2" x:Name="passwordEntry"
+                       Placeholder="Password" IsPassword="true" Keyboard="Default"
+                       HeightRequest="40" />
+                <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+                        Text="Login" FontSize = "16" FontAttributes="Bold" TextColor="White"
+                        HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="250" BackgroundColor="DodgerBlue"
+                        BorderColor="DodgerBlue" BorderRadius="20" BorderWidth="2"
+                        Clicked="LoginBtn_Clicked" />
+                <Label  Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2"
+                        Text="New user? Create an account!" FontSize="16"
+                        HorizontalOptions="Center" VerticalOptions="Center" />
+                <Button Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2"
+                        Text="Create Account" FontSize = "12" FontAttributes="Bold" TextColor="White"
+                        HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="250" BackgroundColor="DodgerBlue"
+                        BorderColor="DodgerBlue" BorderRadius="20" BorderWidth="2"
+                        x:Name="CreateAccountBtn"
+                        Clicked="CreateAccountBtn_Clicked" />
+            </Grid>
+        </StackLayout>
+    </Grid>
+</ContentPage>

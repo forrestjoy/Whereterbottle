@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             mc:Ignorable="d"
+             x:Class="Whereterbottle.Views.AccountDetails"
+             BackgroundImage="LoginBackgroundpng"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout Margin="40,0,0,0">
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+
+                    <ic:CircleImage WidthRequest ="150"
+                                        HeightRequest="150"
+                                        Aspect="AspectFill"
+                                        Source="ExampleProfile.jpg"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Margin="0,20,0,0" />
+                </Grid>
+            </StackLayout>
+            <ScrollView>
+                <StackLayout Margin="10,-5,20,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.15*" />
+                            <ColumnDefinition Width="0.6*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="First:"
+                       Grid.Row="1" Grid.Column="0"
+                       HorizontalTextAlignment="End"
+                        VerticalTextAlignment="End"
+                        VerticalOptions="Center"
+                       TextColor="Black"
+                       FontSize="12" />
+                        <Entry x:Name="userFirstName" FontAttributes="Bold"
+                       Grid.Row="1" Grid.Column="1"
+                       HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="End"
+                        VerticalOptions="Center"
+                       TextColor="Black"
+                       FontSize="16" />
+                        <Label Text="Last:"
+                       Grid.Row="2" Grid.Column="0"
+                       HorizontalTextAlignment="End"
+                        VerticalTextAlignment="End"
+                        VerticalOptions="Center"
+                       TextColor="Black"
+                       FontSize="12" />
+                        <Entry x:Name="userLastName" FontAttributes="Bold"
+                       Grid.Row="2" Grid.Column="1"
+                       HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="End"
+                        VerticalOptions="Center"
+                       TextColor="Black"
+                       FontSize="16" />
+                        <Label Text="Address:"
+                       Grid.Row="3" Grid.Column="0"
+                       HorizontalTextAlignment="End"
+                        VerticalTextAlignment="End"
+                        VerticalOptions="Center"
+                       TextColor="Black"
+                       FontSize="12" />
+                        <Entry x:Name="userAddress" FontAttributes="Bold"
+                       Grid.Row="3" Grid.Column="1"
+                       HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="End"
+                        VerticalOptions="Center"
+                       TextColor="Black"
+                       FontSize="16" />
+                        <Label Text="Email:"
+                       Grid.Row="4" Grid.Column="0"
+                       HorizontalTextAlignment="End"
+                        VerticalTextAlignment="End"
+                        VerticalOptions="Center"
+                       TextColor="Black"
+                       FontSize="12" />
+                        <Entry x:Name="userEmail" FontAttributes="Bold"
+                       Grid.Row="4" Grid.Column="1"
+                       HorizontalTextAlignment="Start"
+                        VerticalTextAlignment="End"
+                        VerticalOptions="Center"
+                       TextColor="Black"
+                       FontSize="16" />
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout>
+                <Button Text="Submit Changes" TextColor="White" FontAttributes="Bold"
+                                BackgroundColor="DodgerBlue" BorderColor="DodgerBlue" BorderRadius="20" BorderWidth="2"
+                                Margin="10,0,10,0"
+                                x:Name="submitChangesButton"
+                                Clicked="submitChangesButton_Clicked" />
+                <Button Text="Return" TextColor="White" FontAttributes="Bold"
+                                BackgroundColor="DodgerBlue" BorderColor="DodgerBlue" BorderRadius="20" BorderWidth="2"
+                                Margin="10,10,10,10"
+                                x:Name="returnButton"
+                                Clicked="returnButton_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

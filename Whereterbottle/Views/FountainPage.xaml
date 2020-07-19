@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Whereterbottle.Views.FountainPage"
+             BackgroundImage="LoginBackgroundpng"
+             NavigationPage.HasNavigationBar="false">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="0,0,0,0">
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*" />
+                        <ColumnDefinition Width="50*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,10,0,0"
+                           Source="fountains.png" />
+                    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center"
+                           Text="Here are your FAVORITES!" FontSize="16" FontAttributes="Italic"/>
+
+                </Grid>
+            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <ListView x:Name="favoriteFountainList" HasUnevenRows="True" ItemSelected="favoriteFountainList_ItemSelected" ItemsSource="{Binding favoriteFountains}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal" Padding="5">
+                                            <!--<Image Source="WaterFountain.png" HeightRequest="50" WidthRequest="50" />-->
+                                            <StackLayout HorizontalOptions="StartAndExpand">
+                                                <Label Text="{Binding _id, StringFormat='ID: {0}'}" TextColor="Black" FontAttributes="Bold" Margin="10,0,0,0"/>
+                                                <Label Text="{Binding filter_status, StringFormat='Filter: {0}'}" TextColor="Black" FontAttributes="Bold" Margin="10,0,0,0"/>
+                                                <Label Text="{Binding rating, StringFormat='Rating: {0}'}" TextColor="Black" FontAttributes="Bold" Margin="10,0,0,0"/>
+                                                <Label Text="{Binding coldness, StringFormat='Temp: {0}'}" TextColor="Black" FontAttributes="Bold" Margin="10,0,0,0"/>
+                                            </StackLayout>
+                                            <Image Source="WaterFountain.png" HeightRequest="50" WidthRequest="80" Margin="0,0,10,0" />
+                                            <!--<Button x:Name="viewButton" Text="View" BackgroundColor="DodgerBlue" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"
+                                         BorderColor="DodgerBlue" BorderRadius="20" BorderWidth="2" Clicked="viewButton_Clicked" />-->
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout>
+                <Grid Margin="10,0,10,10">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <!--<RowDefinition Height="Auto" />-->
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!--<Button Grid.Row="0"
+                            Text="Add Fountain" TextColor="White" FontAttributes="Bold"
+                            BackgroundColor="DodgerBlue" BorderColor="DodgerBlue" BorderRadius="20" BorderWidth="2" HorizontalOptions="Center" WidthRequest="350"
+                            x:Name="addFountainBtn"
+                            Clicked="addFountainBtn_Clicked"/>-->
+                    <Button Grid.Row="0"
+                            Text="View Nearby" TextColor="White" FontAttributes="Bold"
+                            BackgroundColor="DodgerBlue" BorderColor="DodgerBlue" BorderRadius="20" BorderWidth="2" HorizontalOptions="Center" WidthRequest="350"
+                            x:Name="viewNearbyBtn"
+                            Clicked="viewNearbyBtn_Clicked"/>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

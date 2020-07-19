@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{D9D14E0A-859E-4589-8686-1A540ED9144E}|Default">
+  <MonoDevelop.Ide.ItemProperties.Whereterbottle.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Whereterbottle/Alerts/AddFriendPrompt.xaml.cs">
+    <Files>
+      <File FileName="Whereterbottle/Views/FriendsPage.xaml.cs" Line="76" Column="1" />
+      <File FileName="Whereterbottle/Utilities/HttpHandler.cs" />
+      <File FileName="Whereterbottle/Alerts/AddFriendPrompt.xaml.cs" Line="41" Column="63" />
+      <File FileName="Whereterbottle/Alerts/RemoveFriendPrompt.xaml.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Whereterbottle" expanded="True">
+            <Node name="Whereterbottle" expanded="True">
+              <Node name="Alerts" expanded="True">
+                <Node name="AddFriendPrompt.xaml" expanded="True">
+                  <Node name="AddFriendPrompt.xaml.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Utilities" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/xbeyondxwordsx22/Downloads/Whereterbottle-master-2/Whereterbottle/Views/FriendsPage.xaml.cs" relfile="Whereterbottle/Views/FriendsPage.xaml.cs" line="53" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

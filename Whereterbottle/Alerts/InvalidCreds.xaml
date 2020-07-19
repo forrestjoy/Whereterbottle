@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="Whereterbottle.Alerts.InvalidCreds"
+    x:Name="InvalidCredsWindow">
+
+    <Frame CornerRadius="10"
+        OutlineColor="LightSkyBlue"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        HasShadow="True"
+        IsClippedToBounds="True"
+        Padding="0">
+        <StackLayout
+        BackgroundColor="LightSkyBlue"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Padding="20, 20, 20, 20">
+            <Label Text="Invalid Credentials" TextColor="White" HorizontalOptions="Center" />
+            <Button x:Name="btnOkay" Clicked="btnOkay_Clicked" BackgroundColor="DodgerBlue" Text="Okay" TextColor="White" />
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>

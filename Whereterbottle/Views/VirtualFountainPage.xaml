@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Whereterbottle.Views.VirtualFountainPage"
+             BackgroundImage="LoginBackgroundpng"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Margin="40,0,0,0">
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="40" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Row="0" Grid.Column="1"
+                               Margin="0,10,0,0"
+                       Source="WaterFountain.png" />
+
+                        <Label Text="Markstein Fl1"
+                        HorizontalTextAlignment="Center"
+                        TextColor="Black"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        Grid.Row="1" Grid.Column="1"
+                        Margin="0,10,0,0" />
+
+                        <Label Text="Rating: 4.3"
+                        HorizontalTextAlignment="Center"
+                        TextColor="Black"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        Grid.Row="2" Grid.Column="1"
+                        Margin="0,-30,0,0" />
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40*" />
+                            <ColumnDefinition Width="60*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="REVIEWS" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"
+                        Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+                    </Grid>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0,-30,0,0">
+                    <ListView x:Name="reviewList" HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Padding="5">
+                                        <Image Source="ExampleProfile.png" HeightRequest="50" WidthRequest="50" />
+                                        <StackLayout HorizontalOptions="StartAndExpand">
+                                            <Label Text="{Binding Name}" TextColor="Black" FontAttributes="Bold" />
+                                            <Label Text="{Binding Rating, StringFormat='Rating: {0}'}" TextColor="Black" FontAttributes="Bold" />
+                                            <Label Text="{Binding Rev}" TextColor="Black" FontAttributes="Bold" />
+                                        </StackLayout>
+                                        <Button Text="View" BackgroundColor="DodgerBlue" TextColor="White" FontAttributes="Bold"
+                                         BorderColor="DodgerBlue" BorderRadius="20" BorderWidth="2" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

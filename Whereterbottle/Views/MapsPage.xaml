@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Whereterbottle.Views.MapsPage"
+             BackgroundImage="LoginBackgroundpng"
+             NavigationPage.HasNavigationBar="false">
+
+    <StackLayout Padding="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="425" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <maps:Map x:Name="AppMap" Grid.Row="0"
+                  VerticalOptions="FillAndExpand"
+                  HorizontalOptions="Fill"
+                  IsShowingUser="true"
+                  MapType="Street"/>
+
+            <Button Grid.Row="2" Text="Return" TextColor="White" FontAttributes="Bold"
+                                BackgroundColor="DodgerBlue" BorderColor="DodgerBlue" BorderRadius="20" BorderWidth="2"
+                                Margin="0,5,0,10"
+                                x:Name="returnButton"
+                                Clicked="returnButton_Clicked" />
+            <Button Grid.Row="1" Text="Add Fountain" TextColor="White" FontAttributes="Bold"
+                                BackgroundColor="DodgerBlue" BorderColor="DodgerBlue" BorderRadius="20" BorderWidth="2"
+                                Margin="0,0,0,0"
+                                x:Name="addFountainBtn"
+                                Clicked="addFountainBtn_Clicked" />
+        </Grid>
+    </StackLayout>
+</ContentPage>

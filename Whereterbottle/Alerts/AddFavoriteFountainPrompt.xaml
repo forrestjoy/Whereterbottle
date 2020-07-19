@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="Whereterbottle.Alerts.AddFavoriteFountainPrompt"
+    x:Name="AddFavoriteFountainPromptWindow">
+
+    <Frame CornerRadius="10"
+        OutlineColor="LightSkyBlue"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        HasShadow="True"
+        IsClippedToBounds="True"
+        Padding="0">
+        <StackLayout
+        BackgroundColor="LightSkyBlue"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Padding="20, 20, 20, 20">
+            <Label Text="Add fountain to favorites?" TextColor="White" HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="yesBtn" Clicked="yesBtn_Clicked" BackgroundColor="DodgerBlue" Text="Yes" TextColor="White"/>
+                <Button x:Name="noBtn" Clicked="noBtn_Clicked"  BackgroundColor="DodgerBlue" Text="No" TextColor="White" />
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>

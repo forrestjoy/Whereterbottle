@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Whereterbottle.Views.FriendsPage"
+             BackgroundImage="LoginBackgroundpng"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Friends" FontSize="25" TextColor="Black" HorizontalOptions="Center" />
+            </StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <ListView x:Name="friendsList1"
+                              SeparatorColor="LightSlateGray"
+                              HasUnevenRows="True"
+                              ItemsSource="{Binding userFriendsList}"
+                              ItemSelected="friendsList1_ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="ExampleProfile.png" HeightRequest="50" WidthRequest="50" />
+                                        <StackLayout HorizontalOptions="StartAndExpand">
+                                            <Label Text="{Binding firstName, StringFormat='Name: {0}'}" TextColor="Black" FontAttributes="Bold" />
+                                            <Label Text="Status: Following" TextColor="Black" FontAttributes="Italic" />
+                                            <!--<Label Text="{Binding Status}" TextColor="Black" FontAttributes="Italic" />-->
+                                        </StackLayout>
+                                        <!--<Button x:Name="removeFriendBtn" Text="Remove" BackgroundColor="Transparent" TextColor="Red" FontSize="12" FontAttributes="Bold" Clicked="removeFriendBtn_Clicked" />-->
+                                        <Label Text="Remove Friend" FontAttributes="Bold" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Red" TextColor="White"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout>
+                <Button Text="Add Friend" TextColor="White" FontAttributes="Bold"
+                                BackgroundColor="DodgerBlue" BorderColor="DodgerBlue" BorderRadius="20" BorderWidth="2"
+                                Margin="10,0,10,0"
+                                x:Name="addFriendButton"
+                                Clicked="addFriendButton_Clicked"/>
+                <Button Text="Return" TextColor="White" FontAttributes="Bold"
+                                BackgroundColor="DodgerBlue" BorderColor="DodgerBlue" BorderRadius="20" BorderWidth="2"
+                                Margin="10,10,10,10"
+                                x:Name="returnButton"
+                                Clicked="returnButton_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

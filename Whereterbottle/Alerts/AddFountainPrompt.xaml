@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="Whereterbottle.Alerts.AddFountainPrompt"
+    x:Name="AddFountainPromptWindow">
+
+    <Frame CornerRadius="10"
+        OutlineColor="LightSkyBlue"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        HasShadow="True"
+        IsClippedToBounds="True"
+        Padding="0">
+        <StackLayout
+        BackgroundColor="LightSkyBlue"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Padding="20, 20, 20, 20">
+            <Label Text="Filter Status:" TextColor="White" HorizontalOptions="Center" />
+            <Entry x:Name="filterStatusEntry" HorizontalOptions="Fill"/>
+            <Label Text="Rating:" TextColor="White" HorizontalOptions="Center" />
+            <Entry x:Name="ratingEntry" HorizontalOptions="Fill"/>
+            <Label Text="Coldness:" TextColor="White" HorizontalOptions="Center" />
+            <Entry x:Name="coldnessEntry" HorizontalOptions="Fill"/>
+            <!--<Label Text="X-Coord:" TextColor="White" HorizontalOptions="Center" />
+            <Entry x:Name="xCoordEntry" HorizontalOptions="Fill"/>
+            <Label Text="Y-Coord:" TextColor="White" HorizontalOptions="Center" />
+            <Entry x:Name="yCoordEntry" HorizontalOptions="Fill"/>-->
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnSubmit" Clicked="btnSubmit_Clicked"  BackgroundColor="DodgerBlue" Text="Add" TextColor="White" />
+                <Button x:Name="btnCancel" Clicked="btnCancel_Clicked"  BackgroundColor="DodgerBlue" Text="Cancel" TextColor="White" />
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>

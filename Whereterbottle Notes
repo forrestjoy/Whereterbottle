@@ -1,0 +1,16 @@
+Last location DATABASE OBJECT(BottlePage):
+1)Holds last coordinates of whereterbottle
+2) if(Bluetooth=connected){update GPS within app}
+	else {push last coordinates to "LastLocation" in database}
+	
+Show me da bottle BUTTON (BottlePage):
+1) Navigate to maps page that displays location of bottle OR popup modal page
+2) if(connected) {pass location to map class from essentials}
+	else {pull lastLocation from DB, pass to map class with current location, display both..maybe directions?}
+
+Fill level PROGRESS BAR (BottlePage):
+1) Displays fill level of water bottle from slider value of virtual bottle
+
+Fill level SLIDER (Virtual Bottle):
+1) Manually set the water level of bottle
+2) If(slider value = 1) {fill += 1;} else{nothing}

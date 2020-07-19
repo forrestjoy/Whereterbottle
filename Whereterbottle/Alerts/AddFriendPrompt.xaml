@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="Whereterbottle.Alerts.AddFriendPrompt"
+    x:Name="AddFriendPromptWindow">
+
+    <Frame CornerRadius="10"
+        OutlineColor="LightSkyBlue"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        HasShadow="True"
+        IsClippedToBounds="True"
+        Padding="0">
+        <StackLayout
+        BackgroundColor="LightSkyBlue"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Padding="20, 20, 20, 20">
+            <Label Text="Name of Friend:" TextColor="White" HorizontalOptions="Center" />
+            <Entry x:Name="friendName" HorizontalOptions="Fill"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="addFriendBtn" Clicked="addFriendBtn_Clicked"  BackgroundColor="DodgerBlue" Text="Find 'em!" TextColor="White" />
+                <Button x:Name="cancelBtn" Clicked="cancelBtn_Clicked" BackgroundColor="DodgerBlue" Text="JK" TextColor="White" />
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>

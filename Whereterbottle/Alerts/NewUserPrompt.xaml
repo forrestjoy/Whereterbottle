@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="Whereterbottle.Alerts.NewUserPrompt"
+    x:Name="NewUserPromptWindow">
+
+    <Frame CornerRadius="10"
+        OutlineColor="LightSkyBlue"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        HasShadow="True"
+        IsClippedToBounds="True"
+        Padding="0">
+        <StackLayout
+        BackgroundColor="LightSkyBlue"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Padding="20, 20, 20, 20">
+            <Label Text="First Name:" TextColor="White" HorizontalOptions="Center" />
+            <Entry x:Name="firstName" HorizontalOptions="Fill"/>
+            <Label Text="Last Name:" TextColor="White" HorizontalOptions="Center" />
+            <Entry x:Name="lastName" HorizontalOptions="Fill"/>
+            <Label Text="Email:" TextColor="White" HorizontalOptions="Center" />
+            <Entry x:Name="emailEntry" HorizontalOptions="Fill"/>
+            <Label Text="Address:" TextColor="White" HorizontalOptions="Center" />
+            <Entry x:Name="addressEntry" HorizontalOptions="Fill"/>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnSubmit" Clicked="btnSubmit_Clicked"  BackgroundColor="DodgerBlue" Text="Sign Me Up!" TextColor="White" />
+                <Button x:Name="btnCancel" Clicked="btnCancel_Clicked"  BackgroundColor="DodgerBlue" Text="JK" TextColor="White" />
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>
